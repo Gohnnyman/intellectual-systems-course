@@ -1,0 +1,17 @@
+@prefix family: <family:> .
+@prefix relationship: <relationship:> .
+@prefix new_relation: <new_relation:> .
+
+
+
+new_relation:hasGrandChild relationship:hasChild [
+    family:p3 family:p2 ;
+    family:p2 family:p1 ;
+] .
+new_relation:hasGrandChild family:p3 family:p1 .
+
+
+new_relation:hasParent relationship:hasChild [
+    family:p1 family:p2 ;
+] .
+new_relation:hasParent family:p2 family:p1 .

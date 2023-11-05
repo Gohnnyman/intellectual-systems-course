@@ -1,0 +1,16 @@
+@prefix family: <family:> .
+@prefix relationship: <relationship:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+family:JohnDoe rdf:type family:Person ;
+    relationship:hasSpouse family:JaneDoe ;
+    relationship:hasChild family:TomDoe, family:EmilySmith .
+
+family:JaneDoe rdf:type family:Person ;
+    relationship:hasSpouse family:JohnDoe ;
+    relationship:hasChild family:TomDoe, family:EmilySmith .
+
+family:TomDoe rdf:type family:Person ;
+    relationship:hasChild family:SaraDoe .
+
